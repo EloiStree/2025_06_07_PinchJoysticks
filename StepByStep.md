@@ -11,3 +11,4 @@ Let's create a joystick from two hands pinching or two controllers grabbing in t
 - [ ] Build a mock scenario to train on
   - [ ] Add player head transform
   - [ ] Add hands transform
+- [ ] Create an assembly space to isolate the code
