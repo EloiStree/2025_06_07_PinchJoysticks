@@ -1,0 +1,16 @@
+{
+    "name": "be.elab.pinchjoystickxr.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "be.elab.debugdrawutility"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
