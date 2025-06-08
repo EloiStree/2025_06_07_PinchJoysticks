@@ -3,7 +3,9 @@ using UnityEngine;
 
 namespace Eloi.PinchJoysticks
 {
-    public class ExPinchMono_RotateWheelWithPercent11 : MonoBehaviour
+
+    [ExecuteInEditMode]
+        public class ExPinchMono_RotateWheelWithPercent11 : MonoBehaviour
     {
         public Transform m_startDirection;
         public Transform m_wheelToMoveAndRotate;
