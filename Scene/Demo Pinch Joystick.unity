@@ -119,6 +119,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &109091293
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 109091294}
+  m_Layer: 0
+  m_Name: Pinch Josytick Without headset
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &109091294
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109091293}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.31282, y: -0, z: 2.58115}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &119885099 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3331021152279875915, guid: e692ea66b08dac340b45b4ecc575d68d, type: 3}
@@ -415,37 +446,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 737086371}
-  - component: {fileID: 737086370}
   m_Layer: 0
   m_Name: Pinch To Joystick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &737086370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 737086369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dccc9891335db4148ae0e547b000771e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_source: {fileID: 282329882}
-  m_maxValueToYawPercent: 110
-  m_maxValueToPitchPercent: 30
-  m_maxValueToRollPercent: 30
-  m_percentData:
-    m_leftToRightPercent11: 0
-    m_downToUpPercent11: 0
-    m_backToFrontPercent11: 0
-    m_rotatingLeftToRightPercent11: 0
-    m_pitchingBackToFrontPercent11: 0
-    m_rollingLeftToRightPercent11: 0
+  m_IsActive: 0
 --- !u!4 &737086371
 Transform:
   m_ObjectHideFlags: 0
@@ -701,7 +708,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 641167577551300576, guid: e692ea66b08dac340b45b4ecc575d68d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.864
       objectReference: {fileID: 0}
     - target: {fileID: 641167577551300576, guid: e692ea66b08dac340b45b4ecc575d68d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -757,3 +764,4 @@ SceneRoots:
   - {fileID: 217924099}
   - {fileID: 808167377}
   - {fileID: 737086371}
+  - {fileID: 109091294}
