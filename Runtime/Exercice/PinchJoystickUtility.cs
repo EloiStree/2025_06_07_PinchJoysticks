@@ -57,5 +57,23 @@ namespace Eloi.PinchJoysticks
 
             roll = Vector3.SignedAngle(right,direction, forward);
         }
+        public static void GetJoystickPercentFromLocal(
+           Transform rootAnchor, Transform point, float distanceRatioToPercent, bool useClamp, out Vector3 resultJoystickAsPercen11)
+        {
+            Vector3 direction = point.position - rootAnchor.position;
+            GetJoystickPercentFromLocal(direction, distanceRatioToPercent, useClamp, out resultJoystickAsPercen11);
+        }
+        public  static void GetJoystickPercentFromLocal(
+            Vector3 localDirection, float distanceRatioToPercent, bool useClamp, out Vector3 resultJoystickAsPercen11)
+        {
+            localDirection /= distanceRatioToPercent;
+            if (useClamp)
+            {
+                localDirection.x = Mathf.Clamp(localDirection.x, -1f, 1f);
+                localDirection.y = Mathf.Clamp(localDirection.y, -1f, 1f);
+                localDirection.z = Mathf.Clamp(localDirection.z, -1f, 1f);
+            }
+            resultJoystickAsPercen11 = localDirection;
+        }
     }
 }

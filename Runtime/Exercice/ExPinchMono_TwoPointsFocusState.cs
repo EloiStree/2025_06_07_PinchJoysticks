@@ -1,9 +1,20 @@
+
 using UnityEngine;
 using UnityEngine.Events;
 
 
 namespace Eloi.PinchJoysticks
 {
+    [System.Serializable]
+    public struct STRUCT_CartesianTwoPointsWorldToLocal {
+
+        [Header("World")]
+        public STRUCT_CartesianTwoPoints m_fromWorldSpace;
+        public STRUCT_CartesianTwoPoints m_toWorldSpace;
+        [Header("Local")]
+        public STRUCT_CartesianTwoPoints m_fromLocalSpace;
+        public STRUCT_CartesianTwoPoints m_toLocalSpace;
+    }
 
     public class ExPinchMono_TwoPointsFocusState: MonoBehaviour
     {
@@ -82,9 +93,9 @@ namespace Eloi.PinchJoysticks
         }
 
 
-        public void Update()
+        [ContextMenu("Push Refresh")]
+        public void Refresh()
         {
-
             if (m_currentFocusState)
             {
                 STRUCT_CartesianTwoPoints currentState;
@@ -93,6 +104,12 @@ namespace Eloi.PinchJoysticks
                 m_events.m_onFocusStay?.Invoke(m_onFocusStay);
                 m_events.m_onFocusStartStayUpdated?.Invoke(m_onFocusStart, m_onFocusStay);
             }
+        }
+
+        public void Update()
+        {
+
+            Refresh();
 
         }
 
