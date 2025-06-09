@@ -48,13 +48,14 @@ namespace Eloi.PinchJoysticks
             PinchJoystickUtility.GetCartesianOf(m_pointLeft, m_pointRight, out state);
         }
 
+        [ContextMenu("Clear Data")]
         public void ClearData()
         {
             m_onFocusStart = new STRUCT_CartesianTwoPoints();
             m_onFocusStay = new STRUCT_CartesianTwoPoints();
             m_onFocusEnd = new STRUCT_CartesianTwoPoints();
         }
-
+      
 
         [ContextMenu("Set Focus As On")]
         public void SetFocusAsOn()

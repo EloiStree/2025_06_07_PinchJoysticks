@@ -7,6 +7,7 @@ namespace Eloi.PinchJoysticks
     {
 
         public Transform m_droneToMove;
+      
 
         public float m_rotateLeftToRightPercent11 = 0f;
         public Vector3 m_moveDirectionPercent11 = Vector3.zero;
