@@ -21,9 +21,6 @@ namespace Eloi.PinchJoysticks
             m_worldToLocal.m_toWorldSpace = to;
             ComputeData();
 
-
-
-
         }
 
 
@@ -129,10 +126,15 @@ namespace Eloi.PinchJoysticks
                 m_clampValue,
                 out m_percentJoystickDirection
                 );
+
+            m_maxFlatRollToPercent11 = Mathf.Clamp(m_flatRollAngleTo / 180f, -1f, 1f);
+            m_yawPercent11 = Mathf.Clamp(m_flatToForwardYawDirectionAngle / m_maxYawAngle, -1f, 1f);
         }
 
         [Tooltip("The yaw local direcion of the forward in the middle of the to point flat on XZ plan")]
         public float m_flatToForwardYawDirectionAngle = 0f;
+        public float m_maxYawAngle = 180;
+        public float m_yawPercent11 = 0f; // -1 to 1, -1 is left, 1 is right, 0 is center
         public Vector3 m_middleLocalDirection = Vector3.zero;
         public Vector3 m_percentJoystickDirection;
         public float m_middleDistanceFromTo;
@@ -145,7 +147,8 @@ namespace Eloi.PinchJoysticks
         public float m_flatRollAngleFrom;
         public float m_flatRollAngleTo;
         public float m_flatRollAngleDetla;
-
+        public float m_maxflatRollToAngle = 85f;
+        public float m_maxFlatRollToPercent11 = 0;
 
 
         public void GetLocalRollTo(out float roll)

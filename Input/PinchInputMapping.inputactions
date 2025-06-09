@@ -1,0 +1,76 @@
+{
+    "name": "PinchInputMapping",
+    "maps": [
+        {
+            "name": "PinchMappingDefault",
+            "id": "ed47fe5b-62f3-49dc-a548-13e873eb8b6e",
+            "actions": [
+                {
+                    "name": "GripButtonPinchLeft",
+                    "type": "Button",
+                    "id": "d2a82394-e34c-4ce2-8b0f-3e17148b9391",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "GripButtonPinchRIght",
+                    "type": "Button",
+                    "id": "218a7726-f4d9-4935-afdc-d6cf0a01e7a3",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e73cdecb-8c20-4027-9027-2cfef86d50fd",
+                    "path": "<XRController>{LeftHand}/{GripButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GripButtonPinchLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b28cc2e8-7485-4a44-9cb7-2a52a9a01351",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GripButtonPinchLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d892d805-24e7-4658-8c28-fc7462897104",
+                    "path": "<XRController>{RightHand}/{GripButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GripButtonPinchRIght",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c415faff-112b-4dfc-9d24-1f46a73d1194",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GripButtonPinchRIght",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

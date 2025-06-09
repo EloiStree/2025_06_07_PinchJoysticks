@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 namespace Eloi.PinchJoysticks
 {
-
     public class ExPinchMono_AngleRangeToPercent11 : MonoBehaviour
 {
 
@@ -14,6 +13,7 @@ namespace Eloi.PinchJoysticks
     public bool m_clampTheAngle = true;
     public UnityEvent<float> m_onPercentRelayed;
      public bool m_inversePercent = false;
+    
 
         public void PushIn(float angle)
     {

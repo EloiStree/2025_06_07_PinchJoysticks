@@ -2,7 +2,8 @@
     "name": "be.elab.pinchjoystickxr.Runtime",
     "rootNamespace": "",
     "references": [
-        "be.elab.debugdrawutility"
+        "be.elab.debugdrawutility",
+        "Unity.InputSystem"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

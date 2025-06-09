@@ -12,17 +12,27 @@ namespace Eloi.PinchJoysticks
             state.m_leftWorldPosition = pointLeft.position;
             state.m_rightWorldPosition = pointRight.position;
             Vector3 direction = pointRight.position - pointLeft.position;
+            Vector3 middlePoint = (pointLeft.position + pointRight.position) / 2f;
+            if (direction.sqrMagnitude < 0.0001f)
+            {
+                state.m_worldPosition = middlePoint;
+                state.m_worldRotation = Quaternion.identity;
+                state.m_leftWorldPosition = pointLeft.position;
+                state.m_rightWorldPosition = pointRight.position;
+
+                return;
+            }
             Vector3 up = Vector3.up;
             Vector3 forward = Vector3.Cross(direction, up);
             Vector3 right = Vector3.Cross(up, forward);
 
 
-            Vector3 middlePoint = (pointLeft.position + pointRight.position) / 2f;
             //DebugDrawUility.DrawLine(middlePoint, middlePoint + up, Color.green);
             //DebugDrawUility.DrawLine(middlePoint, middlePoint + forward, Color.blue);
             //DebugDrawUility.DrawLine(middlePoint, middlePoint + right, Color.red);
 
             Quaternion rotation = Quaternion.identity;
+
             bool useLookAt = true;
             if (useLookAt)
             {
